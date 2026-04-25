@@ -1,0 +1,33 @@
+.advert-container {
+    position: fixed;
+    min-width: 200px;
+    max-width: 300px;
+    height: 70px;
+    background-color: #ffffff;
+    right: 0;
+    top: 0;
+    border-radius: 0 0 0 20px;
+    z-index: 100;
+    filter: drop-shadow(-4px 4px 10px);
+    display: grid;
+    grid-template-rows: 10px auto;
+}
+.advert-header {
+    width: 100%;
+}
+.advert-negative {
+    background-color: #DB4A45;
+}
+.advert-positive {
+    background-color: #45DBBE;
+}
+.advert-body {
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-top: -10px;
+}
+.advert-body p {
+    color: #485763;
+    text-align: left;
+    line-height: 15px;
+}

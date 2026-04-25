@@ -1,0 +1,18 @@
+@font-face {
+  font-family: "bold";
+  src: url("/fonts/Century-Gothic-Bold.ttf");
+}
+@font-face {
+  font-family: "regular";
+  src: url("/fonts/Century-Gothic-Regular.TTF");
+}
+
+h1 {
+  font-family: 'bold';
+  font-size: 24pt;
+}
+
+p {
+  font-family: "bold";
+  font-size: 10pt;
+}

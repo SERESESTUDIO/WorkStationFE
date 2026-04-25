@@ -1,0 +1,43 @@
+.input-01 {
+    width: calc(100% - 25px);
+    height: 25px;
+    border-radius: 10px;
+    background-color: #ffffff;
+    display: grid;
+    justify-items: center;
+    align-content: center;
+    grid-template-columns: 40px auto 40px;
+    color: #485763;
+    outline: none;
+    border: none;
+}
+.input-01:disabled {
+    background-color: #6F808C;
+}
+.input-01 svg {
+    width: 20px;
+    fill: #485763;
+}
+.input-01 div {
+    justify-self: center;
+    align-self: center;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    display: grid;
+    justify-items: center;
+    align-content: center;
+}
+.input-01 div:hover {
+    opacity: 0.8;
+}
+.input-01 input {
+    width: 100%;
+    border: none;
+    outline: none;
+    background: none;
+    font-family: 'regular';
+    font-size: 12pt;
+    color: #485763;
+    line-height: 20px;
+}

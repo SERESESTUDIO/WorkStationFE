@@ -1,0 +1,17 @@
+.button-01 {
+    border: none;
+    height: 60px;
+    width: 100%;
+    border-radius: 10px;
+    font-family: 'bold';
+    font-size: 14pt;
+    cursor: pointer;
+}
+.button-01:hover {
+    opacity: 0.8;
+}
+.button-01:disabled {
+    background-color: #6F808C;
+    color: #485763;
+    cursor: default;
+}
