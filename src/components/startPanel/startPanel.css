@@ -2,8 +2,8 @@
   background-color: #485763;
   position: fixed;
   width: 1130px;
-  height: 680px;
-  top: calc(50% - 370px);
+  height: 600px;
+  top: calc(50% - 320px);
   left: calc(50% - 565px);
   border-radius: 30px;
   filter: drop-shadow(5px 5px 10px);
@@ -13,8 +13,7 @@
 }
 .start-panel-image-container {
   width: 100%;
-  height: 100%;
-  border: 1px dashed black;
+  height: calc(100% - 80px);
   border-radius: 20px;
   clip-path: fill-box;
 }
@@ -30,8 +29,8 @@
   color: #ffffff;
 }
 .start-panel-viewport {
-    width: 80%;
-    height: 100%;
+  width: 80%;
+  height: 100%;
 }
 .start-panel-viewport form {
   width: 100%;
@@ -43,6 +42,36 @@
   justify-items: center;
 }
 .start-panel-viewport form button {
-    background-color: #23ABE2;
+  background-color: #23abe2;
+  color: #ffffff;
+}
+.start-panel-carousel-container {
+  border: 1px solid white;
+  width: 100%;
+  height: 100%;
+}
+.start-panel-carousel-item {
+  height: 100%;
+}
+@media screen and (max-width: 1200px) {
+  .start-panel-container {
+    background-color: #485763;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    border-radius: 0px;
+    filter: drop-shadow(5px 5px 10px);
+    padding: 0px;
+    display: grid;
+    grid-template-columns: 100%;
+  }
+  .start-panel-body {
+    margin-left: 0px;
+    display: grid;
+    grid-template-rows: 80px 100px auto;
+    justify-items: center;
     color: #ffffff;
+  }
 }

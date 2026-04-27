@@ -6,8 +6,15 @@ import { useTranslation } from "react-i18next";
 
 export const App = () => {
   const [conect, setConect] = useState(true);
+  const [allowToAccess, setAllowToAccess] = useState(false);
   const { data, active } = useConected();
-  const { t, i18n } = useTranslation();
+  const { t } = useTranslation();
+  useEffect(()=>{
+    const token = localStorage.getItem("token");
+    if(token) {
+      setAllowToAccess(true);
+    }
+  },[]);
   useEffect(() => {
     if(active)
     {
@@ -23,7 +30,7 @@ export const App = () => {
   }, [data, active]);
   return (
     <div>
-      <LogIn conected={conect}/>
+      {(!allowToAccess && active) && <LogIn conected={conect}/>}
       {(!conect) && <Advert msg={t('db.disconected')} positive={false}/>}
     </div>
   );
