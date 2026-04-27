@@ -1,3 +1,29 @@
 {
-    "db.disconected": "Our services are down momentarily. We're working on a fix right now."
+    "db.disconected": "Our services are down momentarily. We're working on a fix right now.",
+    "db.outOfSession": "Your session has expired. Please log in again.",
+
+    "logIn.title": "Log In",
+    "logIn.submit": "Log In",
+    "logIn.forgotPassword": "Forgot your password?",
+    "logIn.email": "Email",
+    "logIn.password": "Password",
+    "logIn.incorrectPassword": "The password or email is incorrect.",
+    "logIn.correctPassword": "Welcome to WorkStation.",
+
+    "forgetPassword.title": "Forgot your password?",
+    "forgetPassword.submit": "Send",
+    "forgetPassword.message": "Enter your email and click send to receive password recovery instructions.",
+    "forgetPassword.goBack": "Go back",
+
+    "resetPassword.title": "Change your password",
+    "resetPassword.submit": "Send",
+    "resetPassword.pass01": "Add your new password.",
+    "resetPassword.pass02": "Confirm your password.",
+    "resetPassword.legent01": "Password must be at least 8 characters long.",
+    "resetPassword.legent02": "Password must contain both uppercase and lowercase letters.",
+    "resetPassword.legent03": "Password must include at least one of the following special characters: ( ! # $ % & ' ( ) * + , - . / : ; < = > ? @ [ ] ^ _` { | } ~).",
+
+    "header.panel": "Panel",
+    "header.board": "Board",
+    "header.management": "Management"
 }

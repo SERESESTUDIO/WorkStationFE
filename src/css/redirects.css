@@ -15,3 +15,20 @@
   color: #6f808c;
   cursor: default;
 }
+.redirect-02 {
+  width: 100%;
+  text-align: left;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  font-family: "regular";
+  font-size: 10pt;
+}
+.redirect-02:hover {
+  opacity: 0.8;
+}
+
+.redirect-02:disabled {
+  color: #6f808c;
+  cursor: default;
+}

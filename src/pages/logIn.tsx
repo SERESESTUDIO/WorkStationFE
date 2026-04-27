@@ -6,12 +6,14 @@ import { LookIcon } from "../components/icons/look.icon";
 import { DontLookIcon } from "../components/icons/dontLook.icon";
 import { useLogIn } from "../mutations/useLogIn";
 import { Advert } from "../components/advert/advert";
+import { useTranslation } from "react-i18next";
 
 export const LogIn = ({conected=true}) => {
   const [show, setShow] = useState(false);
   const [allow, setAllow] = useState(false);
   const [advert, setAdvert] = useState<any>();
   const {data, loading, setValues} = useLogIn();
+  const { t } = useTranslation();
   useEffect(()=>{
     if(conected) {
       if(loading) {
@@ -25,16 +27,16 @@ export const LogIn = ({conected=true}) => {
   useEffect(()=>{
     if(data) {
       const dat:any = data;
-      const { message, success, token } = dat.authUser;
+      const { success, token } = dat.authUser;
       if(success) {
         localStorage.setItem("token", token);
         window.location.href = "/";
-        setAdvert({success:true, msg:message});
+        setAdvert({success:true, msg:t('logIn.correctPassword')});
       }
       else {
-        setAdvert({success:false, msg:message});
+        setAdvert({success:false, msg:t('logIn.incorrectPassword')});
       }
-      setTimeout(()=>{setAdvert({success:false, msg:""})},5000);
+      setTimeout(()=>{setAdvert({success:false, msg:""})},10000);
     }
   },[data]);
   const LogInHandle = (event:any) => {
@@ -49,24 +51,24 @@ export const LogIn = ({conected=true}) => {
       <div>
           <StartPanel conected={conected} insert={<>
             <form onSubmit={LogInHandle}>
-              <h1>Log In</h1> 
+              <h1>{t('logIn.title')}</h1> 
               <fieldset className="input-01" disabled={allow}>
                 <EmailIcon />
-                <input name="email" type="email" placeholder="Email"/> 
+                <input name="email" type="email" placeholder={t('logIn.email')}/> 
                 <div></div>
               </fieldset>
               <fieldset className="input-01" disabled={allow}>
                 <PasswordIcon />
-                <input name="password" type={show ? "text" : "password"} placeholder="Password"/> 
+                <input name="password" type={show ? "text" : "password"} placeholder={t('logIn.password')}/> 
                 <div onClick={()=>setShow(!show)}>
                   {(!show) && <DontLookIcon />}
                   {(show) && <LookIcon />}
                 </div>
               </fieldset>
               <div />
-              <button className="button-01" disabled={allow}>Log In</button>
+              <button className="button-01" disabled={allow}>{t('logIn.submit')}</button>
               <fieldset className="redirect-01" disabled={allow}>
-                <a>Forgot your password?</a>
+                <a onClick={()=>window.location.href = "/forgetPassword"}>{t('logIn.forgotPassword')}</a>
               </fieldset>
             </form>
           </>}/>

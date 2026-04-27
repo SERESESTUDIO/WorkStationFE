@@ -13,7 +13,7 @@
 }
 .start-panel-image-container {
   width: 100%;
-  height: calc(100% - 80px);
+  height: 600px;
   border-radius: 20px;
   clip-path: fill-box;
 }
@@ -29,7 +29,7 @@
   color: #ffffff;
 }
 .start-panel-viewport {
-  width: 80%;
+  width: 83%;
   height: 100%;
 }
 .start-panel-viewport form {
@@ -45,13 +45,25 @@
   background-color: #23abe2;
   color: #ffffff;
 }
-.start-panel-carousel-container {
-  border: 1px solid white;
-  width: 100%;
-  height: 100%;
+.start-panel-viewport form ul {
+  font-family: 'regular';
+  font-size: 10pt;
 }
-.start-panel-carousel-item {
-  height: 100%;
+.start-panel-carousel-container {
+  width: 100%;
+  height: 600px;
+}
+.custom-fit-gallery,
+.custom-fit-gallery .image-gallery-content,
+.custom-fit-gallery .image-gallery-slide-wrapper,
+.custom-fit-gallery .image-gallery-swipe,
+.custom-fit-gallery .image-gallery-slides,
+.custom-fit-gallery .image-gallery-slide {
+  height: 600px;
+}
+.custom-fit-gallery .image-gallery-image {
+  height: 600px;
+  object-fit: cover;
 }
 @media screen and (max-width: 1200px) {
   .start-panel-container {

@@ -1,3 +1,29 @@
 {
-    "db.disconected": "Nuestros servicios están caídos momentáneamente. Estamos trabajando para solucionarlo ahora mismo."
+    "db.disconected": "Nuestros servicios están caídos momentáneamente. Estamos trabajando para solucionarlo ahora mismo.",
+    "db.outOfSession": "Tu sección ha caducado. Ingresa de nuevo.",
+
+    "logIn.title": "Ingresar",
+    "logIn.submit": "Enviar",
+    "logIn.forgotPassword": "¿Olvidaste tu contraseña?",
+    "logIn.email": "Correo",
+    "logIn.password": "Contraseña",
+    "logIn.incorrectPassword": "El correo o la contraseña son incorrectos.",
+    "logIn.correctPassword": "Bienvenido a WorkStation",
+
+    "forgetPassword.title": "¿Olvidaste tu contraseña?",
+    "forgetPassword.submit": "Enviar",
+    "forgetPassword.message": "Enviaremos un mensaje con los pasos para recuperar tu contraseña, ingresa tu correo y presiona enviar.",
+    "forgetPassword.goBack": "Volver",
+
+    "resetPassword.title": "Cambia tu contraseña",
+    "resetPassword.submit": "Enviar",
+    "resetPassword.pass01": "Ingresa tu nueva contraseña.",
+    "resetPassword.pass02": "Confirma tu nueva contraseña.",
+    "resetPassword.legent01": "La contraseña debe tener al menos 8 caracteres.",
+    "resetPassword.legent02": "La contraseña debe mayusculas y minusculas.",
+    "resetPassword.legent03": "La contraseña debe tener al menos 1 de los siguientes caracteres especiales ( ! # $ % & ' ( ) * + , - . / : ; < = > ? @ [ ] ^ _` { | } ~).",
+
+    "header.panel": "Panel",
+    "header.board": "Tablero",
+    "header.management": "Gestion"
 }
