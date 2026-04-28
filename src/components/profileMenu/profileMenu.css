@@ -26,7 +26,7 @@
   display: grid;
 }
 .profile-menu-icon svg {
-  fill: #374952;
+  fill: #063144;
   height: 16px;
   width: 16px;
 }
@@ -35,7 +35,8 @@
   text-align: left;
   font-family: "bold";
   font-size: 10pt;
-  color: #374952;
+  color: #063144;
+  text-decoration: none;
 }
 @media screen and (max-width: 1200px) {
   .profile-menu-container {

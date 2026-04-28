@@ -15,3 +15,19 @@
     color: #485763;
     cursor: default;
 }
+.menu-button {
+  font-family: 'bold';
+  font-size: 10pt;
+  text-decoration: none;
+}
+.menu-bodymenu-button:hover {
+  opacity: 0.8;
+}
+.menu-button-inactive {
+  color: #ffffff;
+  opacity: 0.5;
+}
+.menu-button-active {
+  color: #ffffff;
+  opacity: 1;
+}

@@ -25,5 +25,8 @@
 
     "header.panel": "Panel",
     "header.board": "Board",
-    "header.management": "Management"
+    "header.management": "Management",
+
+    "subMenu.configuration": "Configuration",
+    "subMenu.account": "Account"
 }
