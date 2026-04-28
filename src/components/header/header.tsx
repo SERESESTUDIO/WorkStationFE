@@ -17,9 +17,9 @@ export const Header = ({user=emptyUser}) => {
   return (
     <div className='header'>
         <div className='header-menu'>
-            <a onClick={()=>setIndex(0)} className={`${(index == 0) ? "header-button-active" : "header-button-inactive"}`}>{t('header.panel')}</a>
-            <a onClick={()=>setIndex(1)} className={`${(index == 1) ? "header-button-active" : "header-button-inactive"}`}>{t('header.board')}</a>
-            <a onClick={()=>setIndex(2)} className={`${(index == 2) ? "header-button-active" : "header-button-inactive"}`}>{t('header.management')}</a>
+            <a onClick={()=>setIndex(1)} className={`${(index == 1) ? "header-button-active" : "header-button-inactive"}`}>{t('header.panel')}</a>
+            <a onClick={()=>setIndex(2)} className={`${(index == 2) ? "header-button-active" : "header-button-inactive"}`}>{t('header.board')}</a>
+            <a onClick={()=>setIndex(3)} className={`${(index == 3) ? "header-button-active" : "header-button-inactive"}`}>{t('header.management')}</a>
         </div>
         <div className='header-profile'>
             <div className='header-profile-button' ref={userRef}></div>

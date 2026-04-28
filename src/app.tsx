@@ -16,6 +16,9 @@ export const App = () => {
   const { data: userData } = useGetUser();
   const { t } = useTranslation();
   useEffect(()=>{
+    UpdateGraphics(null);
+  },[]);
+  useEffect(()=>{
     if(userData) {
       const dat:any = userData;
       const { success, user } = dat.getUser;
@@ -25,7 +28,6 @@ export const App = () => {
       else {
         setAdvert(ReloadOnFailAuth(t));
         setTimeout(()=>setAdvert(null),10000);
-        UpdateGraphics(null);
       }
     }
   },[userData]);
