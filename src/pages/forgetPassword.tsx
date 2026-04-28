@@ -1,20 +1,24 @@
 import { useEffect, useState } from "react";
 import { StartPanel } from "../components/startPanel/startPanel"
 import { EmailIcon } from "../components/icons/email.icon";
-import { useConected } from "../queries/useConected";
 import { useTranslation } from "react-i18next";
 import { UpdateGraphics } from "../utils/updateGraphics";
 import { Advert } from "../components/advert/advert";
+import { useConected } from "../queries/useConected";
+import { Link } from "react-router";
 
 export const ForgetPassword = () => {
-    const [show, setShow] = useState(false);
+    const [allow, setAllow] = useState(true);
     const [conect, setConect] = useState(true);
-    const [allow, setAllow] = useState(false);
     const { data, active } = useConected();
     const { t } = useTranslation();
     useEffect(()=>{
         UpdateGraphics(null);
-    },[])
+    },[]);
+    useEffect(()=>{
+      if(conect) setAllow(false);
+      else setAllow(true);
+    },[conect]);
     useEffect(() => {
       if(active)
       {
@@ -32,9 +36,7 @@ export const ForgetPassword = () => {
     <>
         <div>
             <StartPanel conected={conect} insert={<>
-              <fieldset className="redirect-02" disabled={allow}>
-                <a onClick={()=>window.location.href = "/"}>{t('forgetPassword.goBack')}</a>
-              </fieldset>
+              {(!allow) && <Link to={"/"} className="redirect-02">{t('forgetPassword.goBack')}</Link>}
               <form onSubmit={()=>{}}>
                 <h1>{t('forgetPassword.title')}</h1> 
                 <p>{t('forgetPassword.message')}</p>

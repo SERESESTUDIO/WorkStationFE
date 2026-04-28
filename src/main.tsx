@@ -17,8 +17,8 @@ createRoot(document.getElementById('root')!).render(
   <ApolloProvider client={client}>
     <BrowserRouter>
       <Routes>
-        <Route path='/' element={<App />} />
-        <Route path='/forgetPassword' element={<ForgetPassword />} />
+        <Route path='/*' element={<App />} />
+        <Route path='/forgetPassword' element={<ForgetPassword/>} />
         <Route path='/resetPassword' element={<ResetPassword />} />
       </Routes>
     </BrowserRouter>

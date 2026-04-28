@@ -7,6 +7,8 @@ import { useGetUser, type IUser } from "./queries/useGetUser";
 import { UpdateGraphics } from "./utils/updateGraphics";
 import { ReloadOnFailAuth } from "./utils/reloadOnFailAuth";
 import { Header } from "./components/header/header";
+import { Menu } from "./components/menu/menu";
+import { checkMobile } from "./utils/checkMobile";
 
 export const App = () => {
   const [conect, setConect] = useState(true);
@@ -15,6 +17,7 @@ export const App = () => {
   const { data, active } = useConected();
   const { data: userData } = useGetUser();
   const { t } = useTranslation();
+  const { isMobile } = checkMobile();
   useEffect(()=>{
     UpdateGraphics(null);
   },[]);
@@ -53,9 +56,15 @@ export const App = () => {
     <>
       {(!user && active) && <LogIn conected={conect}/>}
       {(user && active) && <div className="container">
-        <section className="head">
-          <div></div>
-          <Header  user={user}/>
+        <section className="head" id="head">
+          {(!isMobile) && <>
+            <Menu />
+            <Header  user={user}/>
+          </>}
+          {(isMobile) && <>
+            <Header  user={user}/>
+            <Menu />
+          </>}
         </section>
         <section className="sub-body"></section>  
       </div>}

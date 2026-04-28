@@ -7,6 +7,7 @@ import { DontLookIcon } from "../components/icons/dontLook.icon";
 import { useLogIn } from "../mutations/useLogIn";
 import { Advert } from "../components/advert/advert";
 import { useTranslation } from "react-i18next";
+import { Link } from "react-router";
 
 export const LogIn = ({conected=true}) => {
   const [show, setShow] = useState(false);
@@ -67,9 +68,7 @@ export const LogIn = ({conected=true}) => {
               </fieldset>
               <div />
               <button className="button-01" disabled={allow}>{t('logIn.submit')}</button>
-              <fieldset className="redirect-01" disabled={allow}>
-                <a onClick={()=>window.location.href = "/forgetPassword"}>{t('logIn.forgotPassword')}</a>
-              </fieldset>
+              {(!allow) && <Link className="redirect-01" to={"/forgetPassword"}>{t('logIn.forgotPassword')}</Link>}
             </form>
           </>}/>
       </div>

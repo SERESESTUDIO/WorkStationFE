@@ -6,6 +6,8 @@
   outline: none;
   font-family: "regular";
   font-size: 10pt;
+  color: #ffffff;
+  text-decoration: none;
 }
 .redirect-01:hover {
   opacity: 0.8;
@@ -23,6 +25,8 @@
   outline: none;
   font-family: "regular";
   font-size: 10pt;
+  color: #ffffff;
+  text-decoration: none;
 }
 .redirect-02:hover {
   opacity: 0.8;

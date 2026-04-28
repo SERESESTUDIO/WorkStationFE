@@ -1,0 +1,63 @@
+.profile-menu-container {
+  position: absolute;
+  width: 180px;
+  min-height: 60px;
+  background: #949a9e;
+  right: 65px;
+  top: 80px;
+  border-radius: 0 0px 10px 10px;
+  padding: 20px;
+  display: grid;
+  align-content: start;
+}
+.profile-menu-item {
+  height: 30px;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 30px auto;
+  align-items: center;
+  justify-items: left;
+  cursor: pointer;
+}
+.profile-menu-item:hover {
+  opacity: 0.8;
+}
+.profile-menu-icon {
+  display: grid;
+}
+.profile-menu-icon svg {
+  fill: #374952;
+  height: 16px;
+  width: 16px;
+}
+.profile-menu-item a {
+  width: 100%;
+  text-align: left;
+  font-family: "bold";
+  font-size: 10pt;
+  color: #374952;
+}
+@media screen and (max-width: 1200px) {
+  .profile-menu-container {
+    position: absolute;
+    width: calc(100% - 40px);
+    min-height: 60px;
+    background: #949a9e;
+    right: 0;
+    top: 80px;
+    border-radius: 0 0px 10px 10px;
+    padding: 20px;
+    display: grid;
+    align-content: start;
+  }
+  .profile-menu-item {
+    height: 30px;
+    width: 150px;
+    display: grid;
+    grid-template-columns: 30px auto;
+    align-items: center;
+    justify-items: left;
+    justify-self: center;
+    cursor: pointer;
+  }
+}

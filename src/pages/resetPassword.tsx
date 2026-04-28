@@ -19,6 +19,10 @@ export const ResetPassword = () => {
     useEffect(()=>{
         UpdateGraphics(null);
     },[])
+    useEffect(()=>{
+      if(conect) setAllow(false);
+      else setAllow(true);
+    },[conect]);
     useEffect(() => {
       if(active)
       {
